@@ -4,7 +4,7 @@ include('database.php');
 $user_id = isset($_GET['id']) ? $_GET['id'] : 0;
 if (isset($_POST['btnSubmit'])) {
     $query = 'UPDATE tblusers SET name = "' . $_POST['txtName'] . '" WHERE id = ' . $user_id;
-    $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+    mysql_query($query) or die('Query failed: ' . mysql_error());
     header('Location: index.php');
 }
 
