@@ -43,7 +43,10 @@ include('database.php');
                     <tr>
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['address']; ?></td>
-                        <td>edit | delete</td>
+                        <td>
+                            <a href="edit-address.php?id=<?php echo $row['id']; ?>&uid=<?php echo $user_id; ?>">edit</a> |
+                            <a href="delete-address.php?id=<?php echo $row['id']; ?>&uid=<?php echo $user_id; ?>">delete</a>
+                        </td>
                     </tr>
                     <?php
                 }

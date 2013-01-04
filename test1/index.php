@@ -26,7 +26,11 @@ include('database.php');
                     <tr>
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['name']; ?></td>
-                        <td><a href="detail.php?id=<?php echo $row['id']; ?>">detail</a> | edit | delete</td>
+                        <td>
+                            <a href="detail.php?id=<?php echo $row['id']; ?>">detail</a> |
+                            <a href="edit-user.php?id=<?php echo $row['id']; ?>">edit</a> |
+                            <a href="delete-user.php?id=<?php echo $row['id']; ?>">delete</a>
+                        </td>
                     </tr>
                     <?php
                 }
@@ -38,7 +42,6 @@ include('database.php');
 
 </html>
 <?php
-
 mysql_free_result($result);
 
 mysql_close($link);
